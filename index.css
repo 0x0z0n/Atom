@@ -289,21 +289,15 @@ a:hover {
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(0, 255, 100, 0.3);
   margin-top: 20px;
-  overflow: hidden; /* keeps outer box clean */
+  overflow: hidden; /* hides the scrollbar visually */
 }
 
 .iframe-container iframe {
-  width: 100%;
-  height: 600px; /* fixed height, adjust as you like */
+  display: block;
+  width: calc(100% + 20px); /* push scrollbar outside the wrapper */
+  height: 600px;            /* your desired viewport height */
   border: none;
-  
-  /* hide scrollbars but keep scroll functionality */
-  overflow-y: scroll;
-  scrollbar-width: none; /* Firefox */
-}
-
-.iframe-container iframe::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  margin-right: -20px;      /* same value as added width */
 }
 
 
