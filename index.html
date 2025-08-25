@@ -134,10 +134,10 @@
 
 <!-- Skills Section -->
 <section id="skills" class="section">
-    <div class="container text-center">
-        <h2>Skills</h2>
-        <p> Application Security • Active Directory • DevSecOps </p>
-    </div>
+  <div class="container text-center">
+    <h2>Skills</h2>
+    <div id="skillsList" class="d-flex flex-wrap justify-content-center gap-2"></div>
+  </div>
 </section>
 
 <!-- Projects -->
@@ -197,5 +197,40 @@
     © 2025 | Kshitij
   </div>
 </footer>
+<script>
+  // Fetch categories from your posts.json
+  fetch("https://0x0z0n.github.io/z0n/data/posts.json")
+    .then(res => res.json())
+    .then(posts => {
+      const categories = {};
+      posts.forEach(post => {
+        const catField = post.category || "Uncategorized";
+        const catList = Array.isArray(catField) ? catField : [catField];
+        catList.forEach(cat => {
+          categories[cat] = (categories[cat] || 0) + 1;
+        });
+      });
+
+      const container = document.getElementById("skillsList");
+
+      Object.keys(categories).sort().forEach(cat => {
+        // Skip CheatSheet from appearing as a skill
+        if (cat === "CheatSheet") return;
+
+        const link = document.createElement("a");
+        link.href = `https://0x0z0n.github.io/z0n/index.html?category=${encodeURIComponent(cat)}`;
+        link.target = "_blank";
+        link.className = "btn btn-outline-success btn-sm m-1";
+        link.textContent = cat;
+        container.appendChild(link);
+      });
+    })
+    .catch(err => {
+      console.error("Error loading categories:", err);
+      document.getElementById("skillsList").innerHTML = 
+        "<p style='color:red;'>Failed to load skills.</p>";
+    });
+</script>
+
 </body>
 </html>
