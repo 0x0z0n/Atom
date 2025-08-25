@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Cybersecurity Portfolio | 0x0z0n</title>
+  <title>Kshitij | Cybersecurity Portfolio</title>
   <link rel="icon" type="image/png" href="assets/tab.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
@@ -27,7 +27,7 @@
       color: #ffea00;
       font-size: 1.2rem;
     }
-    .projects, .skills {
+    .projects, .skills, .links {
       max-width: 900px;
       margin: 3rem auto;
       padding: 1rem;
@@ -60,6 +60,27 @@
       background: linear-gradient(90deg, #00ff88, #ffea00);
       border-radius: 8px;
     }
+    .links ul {
+      list-style: none;
+      padding: 0;
+    }
+    .links li {
+      margin: 0.5rem 0;
+    }
+    .links a {
+      color: #00ff88;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .links a:hover {
+      text-shadow: 0 0 10px #ffea00;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
     canvas {
       position: fixed;
       top: 0; left: 0;
@@ -71,7 +92,7 @@
 <body>
   <canvas id="matrix"></canvas>
   <header>
-    <h1 id="heroText">Welcome to My Cyber Portfolio</h1>
+    <h1 id="heroText">Welcome, I'm Kshitij ⚡</h1>
     <p>HackTheBox • CTF • DevSecOps • Research</p>
   </header>
 
@@ -98,86 +119,77 @@
     </div>
   </section>
 
+  <section class="links">
+    <h2>Find Me Online</h2>
+    <ul>
+      <li><a href="https://0x0z0n.github.io/z0n/index.html" target="_blank">📓 Notes Sharing</a></li>
+      <li><a href="https://app.hackthebox.com/profile/1761906" target="_blank">🕵️ HackTheBox</a></li>
+      <li><a href="https://tryhackme.com/p/0x0z0n" target="_blank">🔒 TryHackMe</a></li>
+      <li><a href="https://cyberdefenders.org/p/0x0z0n" target="_blank">🛡️ CyberDefenders</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Kshitij | Built with 💻 + Anime.js</p>
+  </footer>
+
   <script src="assets/js/anime.min.js"></script>
   <script src="assets/js/betterAnime.js"></script>
-<script>
+  <script>
   // Run animations after page load
   window.addEventListener("DOMContentLoaded", () => {
-    betterAnime.typeText(document.getElementById("heroText"), "Welcome Hacker ⚡", 80);
+    betterAnime.typeText(document.getElementById("heroText"), "Welcome, I'm Kshitij ⚡", 80);
     betterAnime.fadeIn(".card", 200);
     betterAnime.neonPulse("#heroText", "#ffea00");
     betterAnime.tiltCard(document.querySelector(".card"));
   });
-</script>
-<script>
-    // Typing effect for hero
-    const heroText = document.getElementById("heroText");
-    const textContent = heroText.textContent;
-    heroText.textContent = "";
-    anime({
-      targets: heroText,
-      textContent: [0, textContent],
-      round: 1,
-      easing: "linear",
-      duration: 3000
+
+  // Animate skill bars when scrolled into view
+  const skillBars = document.querySelectorAll(".skill-fill");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        anime({
+          targets: entry.target,
+          width: entry.target.getAttribute("data-percent") + "%",
+          duration: 2000,
+          easing: "easeInOutQuad"
+        });
+        observer.unobserve(entry.target);
+      }
     });
+  }, {threshold: 0.5});
+  skillBars.forEach(bar => observer.observe(bar));
 
-    // Animate project cards on load
-    anime({
-      targets: ".card",
-      opacity: [0, 1],
-      translateY: [50, 0],
-      delay: anime.stagger(200),
-      duration: 1200,
-      easing: "easeOutExpo"
-    });
+  // Matrix background effect
+  const canvas = document.getElementById("matrix");
+  const ctx = canvas.getContext("2d");
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+  const letters = "01";
+  const fontSize = 14;
+  const columns = canvas.width / fontSize;
+  const drops = Array(Math.floor(columns)).fill(1);
 
-    // Animate skill bars when scrolled into view
-    const skillBars = document.querySelectorAll(".skill-fill");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          anime({
-            targets: entry.target,
-            width: entry.target.getAttribute("data-percent") + "%",
-            duration: 2000,
-            easing: "easeInOutQuad"
-          });
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {threshold: 0.5});
-    skillBars.forEach(bar => observer.observe(bar));
-
-    // Matrix background effect
-    const canvas = document.getElementById("matrix");
-    const ctx = canvas.getContext("2d");
+  function draw(){
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#00ff88";
+    ctx.font = fontSize + "px monospace";
+    for(let i=0; i<drops.length; i++){
+      const text = letters[Math.floor(Math.random()*letters.length)];
+      ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+      if(drops[i]*fontSize > canvas.height && Math.random() > 0.975){
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+  setInterval(draw, 40);
+  window.addEventListener("resize", () => {
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
-    const letters = "01";
-    const fontSize = 14;
-    const columns = canvas.width / fontSize;
-    const drops = Array(Math.floor(columns)).fill(1);
-
-    function draw(){
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "#00ff88";
-      ctx.font = fontSize + "px monospace";
-      for(let i=0; i<drops.length; i++){
-        const text = letters[Math.floor(Math.random()*letters.length)];
-        ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-        if(drops[i]*fontSize > canvas.height && Math.random() > 0.975){
-          drops[i] = 0;
-        }
-        drops[i]++;
-      }
-    }
-    setInterval(draw, 40);
-    window.addEventListener("resize", () => {
-      canvas.height = window.innerHeight;
-      canvas.width = window.innerWidth;
-    });
+  });
   </script>
 </body>
 </html>
