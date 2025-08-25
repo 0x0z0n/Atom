@@ -1,72 +1,182 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>0x0z0n | Cybersecurity Portfolio</title>
+  <title>Cybersecurity Portfolio | 0x0z0n</title>
   <link rel="icon" type="image/png" href="assets/tab.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Base styling -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Anime.js (self-hosted recommended) -->
-  <script src="assets/js/anime.min.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #00ff88;
+      text-shadow: 0 0 20px #00ff88;
+    }
+    header p {
+      color: #ffea00;
+      font-size: 1.2rem;
+    }
+    .projects, .skills {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 1rem;
+    }
+    .card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 12px rgba(0,255,136,0.2);
+      opacity: 0; /* start hidden */
+      transform: translateY(50px);
+    }
+    .skill {
+      margin: 1rem 0;
+    }
+    .skill-name {
+      margin-bottom: 0.5rem;
+    }
+    .skill-bar {
+      width: 100%;
+      background: #222;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .skill-fill {
+      width: 0%;
+      height: 12px;
+      background: linear-gradient(90deg, #00ff88, #ffea00);
+      border-radius: 8px;
+    }
+    canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+  </style>
 </head>
 <body>
+  <canvas id="matrix"></canvas>
   <header>
-    <h1 id="hero">0x0z0n | Cybersecurity Portfolio</h1>
-    <p class="subtitle">HackTheBox • CTFs • Secure Coding</p>
+    <h1 id="heroText">Welcome to My Cyber Portfolio</h1>
+    <p>HackTheBox • CTF • DevSecOps • Research</p>
   </header>
 
-  <main>
-    <!-- Project cards -->
-    <section class="projects">
-      <article class="card">HTB: Antique</article>
-      <article class="card">HTB: Artificial</article>
-      <article class="card">Foodie Panda (Mobile App Pentest)</article>
-    </section>
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="card">HackTheBox Writeups</div>
+    <div class="card">CTF Challenges</div>
+    <div class="card">Secure DevOps Labs</div>
+  </section>
 
-    <!-- Skills -->
-    <section class="skills">
-      <h2>Core Skills</h2>
-      <div class="bar" data-skill="Web Pentesting"></div>
-      <div class="bar" data-skill="Mobile Security"></div>
-      <div class="bar" data-skill="DevSecOps"></div>
-    </section>
-  </main>
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="skill">
+      <div class="skill-name">Web Security</div>
+      <div class="skill-bar"><div class="skill-fill" data-percent="90"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Mobile Security</div>
+      <div class="skill-bar"><div class="skill-fill" data-percent="80"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">DevSecOps</div>
+      <div class="skill-bar"><div class="skill-fill" data-percent="85"></div></div>
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2025 0x0z0n | Built with Anime.js</p>
-  </footer>
+  <script src="assets/js/anime.min.js"></script>
+  <script src="assets/js/betterAnime.js"></script>
+<script>
+  // Run animations after page load
+  window.addEventListener("DOMContentLoaded", () => {
+    betterAnime.typeText(document.getElementById("heroText"), "Welcome Hacker ⚡", 80);
+    betterAnime.fadeIn(".card", 200);
+    betterAnime.neonPulse("#heroText", "#ffea00");
+    betterAnime.tiltCard(document.querySelector(".card"));
+  });
+</script>
+<script>
+    // Typing effect for hero
+    const heroText = document.getElementById("heroText");
+    const textContent = heroText.textContent;
+    heroText.textContent = "";
+    anime({
+      targets: heroText,
+      textContent: [0, textContent],
+      round: 1,
+      easing: "linear",
+      duration: 3000
+    });
 
-  <!-- Anime.js Animation -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Hero animation
-      anime({
-        targets: "#hero",
-        translateY: [-50, 0],
-        opacity: [0, 1],
-        duration: 1500,
-        easing: "easeOutExpo"
+    // Animate project cards on load
+    anime({
+      targets: ".card",
+      opacity: [0, 1],
+      translateY: [50, 0],
+      delay: anime.stagger(200),
+      duration: 1200,
+      easing: "easeOutExpo"
+    });
+
+    // Animate skill bars when scrolled into view
+    const skillBars = document.querySelectorAll(".skill-fill");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          anime({
+            targets: entry.target,
+            width: entry.target.getAttribute("data-percent") + "%",
+            duration: 2000,
+            easing: "easeInOutQuad"
+          });
+          observer.unobserve(entry.target);
+        }
       });
+    }, {threshold: 0.5});
+    skillBars.forEach(bar => observer.observe(bar));
 
-      // Project cards fade in
-      anime({
-        targets: ".card",
-        opacity: [0, 1],
-        translateY: [20, 0],
-        delay: anime.stagger(300),
-        easing: "easeOutQuad"
-      });
+    // Matrix background effect
+    const canvas = document.getElementById("matrix");
+    const ctx = canvas.getContext("2d");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    const letters = "01";
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
 
-      // Skills bar grow
-      anime({
-        targets: ".bar",
-        width: "90%",
-        delay: anime.stagger(500),
-        easing: "easeInOutQuad"
-      });
+    function draw(){
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#00ff88";
+      ctx.font = fontSize + "px monospace";
+      for(let i=0; i<drops.length; i++){
+        const text = letters[Math.floor(Math.random()*letters.length)];
+        ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+        if(drops[i]*fontSize > canvas.height && Math.random() > 0.975){
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+    setInterval(draw, 40);
+    window.addEventListener("resize", () => {
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
     });
   </script>
 </body>
