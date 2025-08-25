@@ -1,195 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <title>Kshitij | Cybersecurity Portfolio</title>
-  <link rel="icon" type="image/png" href="assets/tab.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Courier New', monospace;
-      background: #0a0a0a;
-      color: #e0e0e0;
-      overflow-x: hidden;
-    }
-    header {
-      text-align: center;
-      padding: 4rem 1rem;
-    }
-    header h1 {
-      font-size: 3rem;
-      color: #00ff88;
-      text-shadow: 0 0 20px #00ff88;
-    }
-    header p {
-      color: #ffea00;
-      font-size: 1.2rem;
-    }
-    .projects, .skills, .links {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 1rem;
-    }
-    .card {
-      background: #111;
-      border: 1px solid #222;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 0 12px rgba(0,255,136,0.2);
-      opacity: 0; /* start hidden */
-      transform: translateY(50px);
-    }
-    .skill {
-      margin: 1rem 0;
-    }
-    .skill-name {
-      margin-bottom: 0.5rem;
-    }
-    .skill-bar {
-      width: 100%;
-      background: #222;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .skill-fill {
-      width: 0%;
-      height: 12px;
-      background: linear-gradient(90deg, #00ff88, #ffea00);
-      border-radius: 8px;
-    }
-    .links ul {
-      list-style: none;
-      padding: 0;
-    }
-    .links li {
-      margin: 0.5rem 0;
-    }
-    .links a {
-      color: #00ff88;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .links a:hover {
-      text-shadow: 0 0 10px #ffea00;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #777;
-      font-size: 0.9rem;
-    }
-    canvas {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
-    }
-  </style>
+  <script src="anime.min.js"></script>
+  <script src="betterAnime.js"></script>
 </head>
 <body>
-  <canvas id="matrix"></canvas>
-  <header>
-    <h1 id="heroText">Welcome, I'm Kshitij ⚡</h1>
-    <p>HackTheBox • CTF • DevSecOps • Research</p>
-  </header>
+  <!-- Cyber grid background -->
+  <div class="cyber-grid"></div>
 
-  <section class="projects">
-    <h2>Projects</h2>
-    <div class="card">HackTheBox Writeups</div>
-    <div class="card">CTF Challenges</div>
-    <div class="card">Secure DevOps Labs</div>
+  <!-- Hero -->
+  <section id="hero">
+    <h1 id="heroText"></h1>
+    <p class="tagline">Penetration Tester | CTF Player | Cybersecurity Enthusiast</p>
   </section>
 
-  <section class="skills">
-    <h2>Skills</h2>
-    <div class="skill">
-      <div class="skill-name">Web Security</div>
-      <div class="skill-bar"><div class="skill-fill" data-percent="90"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">Mobile Security</div>
-      <div class="skill-bar"><div class="skill-fill" data-percent="80"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">DevSecOps</div>
-      <div class="skill-bar"><div class="skill-fill" data-percent="85"></div></div>
-    </div>
+  <!-- About -->
+  <section class="card">
+    <h2>👨‍💻 About Me</h2>
+    <p>
+      Hi, I'm <strong>Kshitij</strong>.  
+      I break systems to secure them ⚡. I enjoy Capture the Flag challenges,
+      penetration testing, and sharing research.
+    </p>
   </section>
 
-  <section class="links">
-    <h2>Find Me Online</h2>
+  <!-- Notes -->
+  <section class="card">
+    <h2>📓 Notes Sharing</h2>
+    <a href="https://0x0z0n.github.io/z0n/index.html" target="_blank">Visit My Notes →</a>
+  </section>
+
+  <!-- Profiles -->
+  <section class="card">
+    <h2>🌐 Profiles</h2>
     <ul>
-      <li><a href="https://0x0z0n.github.io/z0n/index.html" target="_blank">📓 Notes Sharing</a></li>
-      <li><a href="https://app.hackthebox.com/profile/1761906" target="_blank">🕵️ HackTheBox</a></li>
-      <li><a href="https://tryhackme.com/p/0x0z0n" target="_blank">🔒 TryHackMe</a></li>
-      <li><a href="https://cyberdefenders.org/p/0x0z0n" target="_blank">🛡️ CyberDefenders</a></li>
+      <li><a href="https://app.hackthebox.com/profile/1761906" target="_blank">HackTheBox</a></li>
+      <li><a href="https://tryhackme.com/p/0x0z0n" target="_blank">TryHackMe</a></li>
+      <li><a href="https://cyberdefenders.org/p/0x0z0n" target="_blank">CyberDefenders</a></li>
     </ul>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Kshitij | Built with 💻 + Anime.js</p>
+    <p>© 2025 Kshitij | Built with 💻 & Anime.js</p>
   </footer>
 
-  <script src="assets/js/anime.min.js"></script>
-  <script src="assets/js/betterAnime.js"></script>
   <script>
-  // Run animations after page load
-  window.addEventListener("DOMContentLoaded", () => {
+    // Animations
     betterAnime.typeText(document.getElementById("heroText"), "Welcome, I'm Kshitij ⚡", 80);
-    betterAnime.fadeIn(".card", 200);
     betterAnime.neonPulse("#heroText", "#ffea00");
-    betterAnime.tiltCard(document.querySelector(".card"));
-  });
+    betterAnime.fadeIn(".card", 300);
 
-  // Animate skill bars when scrolled into view
-  const skillBars = document.querySelectorAll(".skill-fill");
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        anime({
-          targets: entry.target,
-          width: entry.target.getAttribute("data-percent") + "%",
-          duration: 2000,
-          easing: "easeInOutQuad"
-        });
-        observer.unobserve(entry.target);
-      }
+    document.querySelectorAll(".card").forEach(card => {
+      betterAnime.tiltCard(card);
     });
-  }, {threshold: 0.5});
-  skillBars.forEach(bar => observer.observe(bar));
-
-  // Matrix background effect
-  const canvas = document.getElementById("matrix");
-  const ctx = canvas.getContext("2d");
-  canvas.height = window.innerHeight;
-  canvas.width = window.innerWidth;
-  const letters = "01";
-  const fontSize = 14;
-  const columns = canvas.width / fontSize;
-  const drops = Array(Math.floor(columns)).fill(1);
-
-  function draw(){
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#00ff88";
-    ctx.font = fontSize + "px monospace";
-    for(let i=0; i<drops.length; i++){
-      const text = letters[Math.floor(Math.random()*letters.length)];
-      ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-      if(drops[i]*fontSize > canvas.height && Math.random() > 0.975){
-        drops[i] = 0;
-      }
-      drops[i]++;
-    }
-  }
-  setInterval(draw, 40);
-  window.addEventListener("resize", () => {
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
-  });
   </script>
 </body>
 </html>
