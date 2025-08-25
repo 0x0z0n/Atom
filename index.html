@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>0x0z0n | Cybersecurity Portfolio</title>
+  <link rel="icon" type="image/png" href="assets/tab.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Base styling -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Anime.js (self-hosted recommended) -->
+  <script src="assets/js/anime.min.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1 id="hero">0x0z0n | Cybersecurity Portfolio</h1>
+    <p class="subtitle">HackTheBox • CTFs • Secure Coding</p>
+  </header>
+
+  <main>
+    <!-- Project cards -->
+    <section class="projects">
+      <article class="card">HTB: Antique</article>
+      <article class="card">HTB: Artificial</article>
+      <article class="card">Foodie Panda (Mobile App Pentest)</article>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+      <h2>Core Skills</h2>
+      <div class="bar" data-skill="Web Pentesting"></div>
+      <div class="bar" data-skill="Mobile Security"></div>
+      <div class="bar" data-skill="DevSecOps"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 0x0z0n | Built with Anime.js</p>
+  </footer>
+
+  <!-- Anime.js Animation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Hero animation
+      anime({
+        targets: "#hero",
+        translateY: [-50, 0],
+        opacity: [0, 1],
+        duration: 1500,
+        easing: "easeOutExpo"
+      });
+
+      // Project cards fade in
+      anime({
+        targets: ".card",
+        opacity: [0, 1],
+        translateY: [20, 0],
+        delay: anime.stagger(300),
+        easing: "easeOutQuad"
+      });
+
+      // Skills bar grow
+      anime({
+        targets: ".bar",
+        width: "90%",
+        delay: anime.stagger(500),
+        easing: "easeInOutQuad"
+      });
+    });
+  </script>
+</body>
+</html>
