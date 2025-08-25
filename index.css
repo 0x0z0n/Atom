@@ -45,7 +45,7 @@ a:hover {
 }
 
 .socials a {
-  font-size: 2rem;
+  font-size: 1.2rem;
   color: #00ffcc;
   transition: all 0.3s ease-in-out;
 }
@@ -54,6 +54,12 @@ a:hover {
   color: #ffea00;
   text-shadow: 0 0 10px #ffea00, 0 0 20px #ffea00;
   transform: scale(1.2) rotate(5deg);
+}
+
+@media (max-width: 768px) {
+  .socials a {
+    font-size: 1rem; /* smaller on mobile */
+  }
 }
 
 .copyright {
