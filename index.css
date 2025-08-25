@@ -284,21 +284,18 @@ a:hover {
     color: #8fbc8f;  /* Light green for ASCII text */
 }
 
+/* Hide scrollbar but keep scroll functionality */
 .iframe-container {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(0, 255, 100, 0.3);
-  margin-top: 20px;
-  overflow: hidden; /* keeps outer box clean */
+  height: 100%;
+  overflow: hidden; /* Hide outer scrollbars */
 }
 
 .iframe-container iframe {
   width: 100%;
-  height: 600px; /* fixed height, adjust as you like */
+  height: 80vh; /* Adjust height as needed */
   border: none;
-  
-  /* hide scrollbars but keep scroll functionality */
-  overflow-y: scroll;
+  overflow: auto; /* Allow scrolling */
   scrollbar-width: none; /* Firefox */
 }
 
