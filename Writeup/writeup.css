@@ -1,0 +1,193 @@
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Fira Code', monospace;
+}
+a {
+    color: #32cd32;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.navbar {
+    background-color: #161b22;
+}
+.section {
+    padding: 50px 0;
+}
+.card {
+    background-color: #161b22;
+    border: none;
+}
+.btn-primary {
+    background-color: #32cd32;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #28a428;
+}
+.socials {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+.socials a {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+.socials svg {
+    fill: white;
+}
+.socials a:hover {
+    color: #32cd32;
+}
+.copyright {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 14px;
+}
+terminal-window {
+    width: 80%;
+    height: 70%;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.window-header {
+    height: 30px;
+    background-color: #333;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.window-header .button {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.window-header .close {
+    background-color: #e74c3c; /* Red */
+}
+
+.window-header .minimize {
+    background-color: #f1c40f; /* Yellow */
+}
+
+.window-header .maximize {
+    background-color: #2ecc71; /* Green */
+}
+
+.terminal {
+    padding: 20px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.5;
+    height: calc(100% - 30px);
+}
+
+.terminal code {
+    font-family: "Courier New", Courier, monospace;
+    color: #8fbc8f;
+}
+
+.terminal .prompt {
+    color: #00ff00;
+}
+
+.htb-badge {
+  width: 220px;
+  height: 50px;
+  background-color: #343c41;
+  border-radius: 4px;
+  text-align: left;
+  background-image: url(https://www.hackthebox.com/images/icon20.png);
+  background-position: right 5px bottom 5px;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.htb-avatar-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+.htb-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.htb-info {
+  font-family: "Roboto", monospace;
+  padding-left: 5px;
+}
+
+.htb-nickname {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.htb-rank {
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.htb-ranking {
+  color: #ffffff;
+  font-size: 10px;
+}
+
+.htb-points {
+  color: #56C0E0;
+  font-size: 10px;
+}
+
+.htb-respect {
+  color: #f7af3e;
+  font-size: 10px;
+}
+
+.htb-line {
+  line-height: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.htb-link {
+  color: #9acc14;
+  font-size: 0.6em;
+  text-decoration: none;
+}
+
+.htb-link:hover {
+  text-decoration: underline;
+}
+
+.htb-icon {
+  width: 10px;
+  height: 10px;
+}
+
