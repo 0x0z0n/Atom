@@ -285,35 +285,25 @@ a:hover {
 }
 
 .iframe-container {
-  position: relative;
   width: 100%;
-  padding-bottom: 65%; /* keeps aspect ratio */
-  height: 0;
-  overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(0, 255, 100, 0.3);
+  margin-top: 20px;
+  overflow: hidden; /* keeps outer box clean */
 }
 
 .iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 600px; /* fixed height, adjust as you like */
   border: none;
-  border-radius: 12px;
+  
+  /* hide scrollbars but keep scroll functionality */
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
 }
 
-.iframe-container {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(0, 255, 100, 0.3);
-}
-.iframe-container iframe {
-  width: 100%;
-  border: none;
-  display: block;
+.iframe-container iframe::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 
