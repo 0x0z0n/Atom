@@ -69,6 +69,29 @@ a:hover {
   font-size: 14px;
 }
 
+.experience-card {
+  background: #fff;
+  border-left: 5px solid #198754; /* green accent line */
+  transition: transform 0.2s ease-in-out;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.experience-card h4 {
+  font-weight: 600;
+}
+
+.experience-card p {
+  line-height: 1.6;
+}
+
+.experience-card ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+
 /* Certification Section */
 #certifications {
     padding: 50px 0;
