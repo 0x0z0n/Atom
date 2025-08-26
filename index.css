@@ -97,6 +97,17 @@ a:hover {
   color: #dcdcdc;
 }
 
+.company {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+ 
+.company .duration {
+  font-size: 0.9rem;
+  color: #aaa;   /* lighter text */
+  margin-left: 8px;
+}
+
 /* Certification Section */
 #certifications {
     padding: 50px 0;
@@ -350,6 +361,4 @@ a:hover {
     color: #fff;
 }
 
-span { 
-    text-align : right;
-}
+
