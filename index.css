@@ -70,26 +70,31 @@ a:hover {
 }
 
 .experience-card {
-  background: #fff;
-  border-left: 5px solid #198754; /* green accent line */
-  transition: transform 0.2s ease-in-out;
+  background: #111;              /* Rich black background */
+  color: #f5f5f5;               /* Light text for contrast */
+  border-left: 4px solid #198754; /* Accent green line */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .experience-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
 .experience-card h4 {
   font-weight: 600;
+  color: #ffffff;
 }
 
 .experience-card p {
-  line-height: 1.6;
+  margin-bottom: 0.8rem; /* tighter spacing */
+  font-size: 0.95rem;
 }
 
 .experience-card ul {
   padding-left: 1.2rem;
   margin-bottom: 0;
+  color: #dcdcdc;
 }
 
 /* Certification Section */
