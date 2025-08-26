@@ -349,3 +349,7 @@ a:hover {
     background-color: #218838;
     color: #fff;
 }
+
+span { 
+    text-align : right;
+}
