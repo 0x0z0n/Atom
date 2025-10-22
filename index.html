@@ -8,6 +8,76 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <style>
+        /* ================= Terminal Card ================= */
+        .terminal-card {
+            background-color: #0a0a0a;
+            border: 1px solid #111;
+            font-family: 'Fira Code', monospace;
+            color: #00ff95;
+            transition: transform 0.2s;
+            margin-bottom: 1.5rem;
+        }
+
+        .terminal-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 255, 149, 0.2);
+        }
+
+        /* Terminal Header */
+        .terminal-header {
+            background-color: #111;
+            border-bottom: 1px solid #222;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+        }
+
+        .terminal-header .dots {
+            display: flex;
+            gap: 0.3rem;
+        }
+
+        .terminal-header .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .terminal-header .dot.red { background-color: #ff605c; }
+        .terminal-header .dot.yellow { background-color: #ffbd44; }
+        .terminal-header .dot.green { background-color: #00ca4e; }
+
+        .terminal-header .terminal-title {
+            margin-left: 1rem;
+        }
+
+        /* Terminal Body */
+        .terminal-body {
+            background-color: #0a0a0a;
+            padding: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .terminal-body ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        .terminal-body a.btn {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+    </style>
 </head>
 <body>
 <div id="particles-js"></div>
@@ -180,54 +250,48 @@
   </div>
 </section>
 
-<!-- Projects Section -->
+<!-- Projects Section (Terminal Design) -->
 <section id="projects" class="section">
     <div class="container">
         <h2 class="text-center">Projects</h2>
 
-        <!-- CropVision Project Card -->
-        <div class="project-card p-4 shadow-sm rounded mb-4">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h4 class="mb-0">CropVision - AI-Powered Plant Disease Detection</h4>
-                <span class="badge bg-success">Deep Learning / CNN</span>
+        <!-- Terminal Project Card -->
+        <div class="terminal-card">
+            <div class="terminal-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="terminal-title">CropVision - AI Plant Disease Detection</span>
             </div>
-            <p>
-                CropVision uses convolutional neural networks (CNNs) to automatically detect and classify plant diseases
-                from images, achieving 93%+ accuracy. It reduces reliance on expert knowledge, helps monitor crop health,
-                minimizes losses, and supports sustainable agriculture.
-            </p>
-
-            <h5>Proposed System:</h5>
-            <ul>
-                <li><strong>Data Acquisition:</strong> Images collected from PlantVillage dataset.</li>
-                <li><strong>Preprocessing:</strong> Images resized and normalized for uniform input.</li>
-                <li><strong>Feature Extraction & Classification:</strong> CNN (LeNet variant) with convolutional, pooling, dropout, and fully connected layers to extract features and classify diseases.</li>
-            </ul>
-
-            <h5>Architecture & Working:</h5>
-            <ul>
-                <li>Convolutional layers extract hierarchical features.</li>
-                <li>Max pooling reduces spatial dimensions.</li>
-                <li>Fully connected layers and softmax activation perform classification.</li>
-                <li>Pre-trained weights enhance accuracy.</li>
-                <li>Input images resized to 128×128 for model prediction.</li>
-                <li>CNN extracts features via Conv2D, MaxPooling2D, and Dropout, then flattening into dense layers for classification.</li>
-                <li>Output provides predicted disease class with probability scores.</li>
-            </ul>
-
-            <div class="mt-3">
-                <a href="https://github.com/0x0z0n/CropVision" target="_blank" class="btn btn-primary me-2">
-                    View Repository
-                </a>
-                <a href="https://0x0z0n.github.io/CropVision/" target="_blank" class="btn btn-success">
-                    Static Page
-                </a>
+            <div class="terminal-body">
+                <p><strong>Description:</strong> Uses CNNs to detect plant diseases automatically with 93%+ accuracy.</p>
+                <p><strong>Proposed System:</strong></p>
+                <ul>
+                    <li>Data Acquisition: Images collected from PlantVillage dataset.</li>
+                    <li>Preprocessing: Images resized and normalized.</li>
+                    <li>Feature Extraction & Classification: CNN (LeNet variant).</li>
+                </ul>
+                <p><strong>Architecture & Working:</strong></p>
+                <ul>
+                    <li>Convolutional layers extract hierarchical features.</li>
+                    <li>Max pooling reduces spatial dimensions.</li>
+                    <li>Fully connected layers + Softmax activation for classification.</li>
+                    <li>Pre-trained weights enhance accuracy.</li>
+                    <li>Input images resized to 128×128.</li>
+                    <li>Output: Predicted disease class with probability scores.</li>
+                </ul>
+                <div class="mt-3">
+                    <a href="https://github.com/0x0z0n/CropVision" target="_blank" class="btn btn-success btn-sm me-2">Repository</a>
+                    <a href="https://0x0z0n.github.io/CropVision/" target="_blank" class="btn btn-success btn-sm me-2">Live Page</a>
+                    <a href="https://0x0z0n.github.io/z0n/posts/CropVision.html" target="_blank" class="btn btn-success btn-sm">Documentation</a>
+                </div>
             </div>
         </div>
 
     </div>
 </section>
-
 
 <!-- Write-Ups Section -->
 <section id="writeups" class="section">
@@ -267,9 +331,8 @@
   </div>
 </footer>
 
-<!-- Updated Logic -->
+<!-- Updated Logic for Skills -->
 <script>
-  // Fetch categories dynamically from posts.json
   fetch("https://0x0z0n.github.io/z0n/data/posts.json")
     .then(res => res.json())
     .then(posts => {
@@ -277,9 +340,7 @@
       posts.forEach(post => {
         const catField = post.category || "Uncategorized";
         const catList = Array.isArray(catField) ? catField : [catField];
-        catList.forEach(cat => {
-          categories[cat] = (categories[cat] || 0) + 1;
-        });
+        catList.forEach(cat => { categories[cat] = (categories[cat] || 0) + 1; });
       });
 
       const container = document.getElementById("skillsList");
@@ -288,7 +349,6 @@
         if (cat === "CheatSheet") return;
 
         const link = document.createElement("a");
-        // Redirect to blog index page and trigger search automatically
         link.href = `https://0x0z0n.github.io/z0n/index.html?search=${encodeURIComponent(cat)}`;
         link.target = "_blank";
         link.className = "btn btn-outline-success btn-sm m-1";
@@ -298,8 +358,7 @@
     })
     .catch(err => {
       console.error("Error loading categories:", err);
-      document.getElementById("skillsList").innerHTML = 
-        "<p style='color:red;'>Failed to load skills.</p>";
+      document.getElementById("skillsList").innerHTML = "<p style='color:red;'>Failed to load skills.</p>";
     });
 </script>
 
