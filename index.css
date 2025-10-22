@@ -213,7 +213,7 @@ a:hover {
 
 /* Info Styling */
 .writeup-info {
-    padding: 15px;
+    padding: 8px;
     text-align: center;
     position: absolute;
     top: 0;
@@ -223,7 +223,7 @@ a:hover {
     background: rgba(0, 0, 0, 0.6);
     color: white;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.1s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
