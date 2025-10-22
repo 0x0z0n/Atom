@@ -70,3 +70,238 @@
         </p>
     </div>
 </section>
+
+<!-- Experience Section -->
+<section id="Experience" class="section">
+    <div class="container">
+        <h2 class="text-center">Experience</h2>
+        <!-- Job 1 -->
+        <div class="experience-card p-4 shadow-sm rounded mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="mb-0">Cybersecurity Analyst (SE)</h4>
+                <p class="company mb-0">
+                    <strong>Tata Consultancy Services</strong>
+                    <span class="duration">Mar 2024 – Present</span>
+                </p>
+            </div>
+            <ul class="text-start lh-lg">
+                <li>Investigated triaged 100+ security alerts weekly using SIEM and XDR tools, reducing false positives by 20%.</li>
+                <li>Conducted forensic analysis to identify root causes and mitigate advanced persistent threats.</li>
+                <li>Performed vulnerability assessments and validated remediation, improving compliance by 15%.</li>
+                <li>Executed penetration testing engagements and developed custom payloads for red teaming.</li>
+                <li>Prepared detailed incident reports and collaborated with IT/DevOps teams to strengthen security posture.</li>
+            </ul>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="experience-card p-4 shadow-sm rounded mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="mb-0">Cybersecurity &amp; Digital Forensics Intern</h4>
+                <p class="company mb-0">
+                    <strong>Cyber Secured India</strong>
+                    <span class="duration">Dec 2023 – Mar 2024</span>
+                </p>
+            </div>
+            <ul class="text-start lh-lg">
+                <li>Completed 36+ hrs/week of hands-on cybersecurity and forensics training.</li>
+                <li>Worked on live projects including malware analysis and log investigations.</li>
+                <li>Performed evidence collection and forensic reporting for investigations.</li>
+                <li>Delivered weekly assignments and collaborated on project-based learning tasks.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Certification Section -->
+<section id="certifications" class="section">
+    <div class="container">
+        <h2 class="text-center">Certifications</h2>
+        <div class="row">
+            <!-- Certificate 1 -->
+            <div class="col-md-6">
+                <div class="certificate-card">
+                    <div class="certificate-img-container">
+                        <img src="./Cert/THM1.png" alt="AoC 2021" class="certificate-img">
+                        <div class="certificate-info">
+                            <h4>Advent of Cyber 2021</h4>
+                            <p>Issued by TryHackMe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 2 -->
+            <div class="col-md-6">
+                <div class="certificate-card">
+                    <div class="certificate-img-container">
+                        <img src="./Cert/THM2.png" alt="AoC 2022" class="certificate-img">
+                        <div class="certificate-info">
+                            <h4>Advent of Cyber 2022</h4>
+                            <p>Issued by TryHackMe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Certificate 3 -->
+            <div class="col-md-6">
+                <div class="certificate-card">
+                    <div class="certificate-img-container">
+                        <img src="./Cert/THM3.png" alt="AoC 2023" class="certificate-img">
+                        <div class="certificate-info">
+                            <h4>Advent of Cyber 2023</h4>
+                            <p>Issued by TryHackMe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 4 -->
+            <div class="col-md-6">
+                <div class="certificate-card">
+                    <div class="certificate-img-container">
+                        <img src="./Cert/THM4.png" alt="AoC 2024" class="certificate-img">
+                        <div class="certificate-info">
+                            <h4>Advent of Cyber 2024</h4>
+                            <p>Issued by TryHackMe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section">
+  <div class="container text-center">
+    <h2>Skills</h2>
+    <div id="skillsList" class="d-flex flex-wrap justify-content-center gap-2"></div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="text-center">Projects</h2>
+
+        <!-- CropVision Project Card -->
+        <div class="project-card p-4 shadow-sm rounded mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="mb-0">CropVision - AI-Powered Plant Disease Detection</h4>
+                <span class="badge bg-success">Deep Learning / CNN</span>
+            </div>
+            <p>
+                CropVision uses convolutional neural networks (CNNs) to automatically detect and classify plant diseases
+                from images, achieving 93%+ accuracy. It reduces reliance on expert knowledge, helps monitor crop health,
+                minimizes losses, and supports sustainable agriculture.
+            </p>
+
+            <h5>Proposed System:</h5>
+            <ul>
+                <li><strong>Data Acquisition:</strong> Images collected from PlantVillage dataset.</li>
+                <li><strong>Preprocessing:</strong> Images resized and normalized for uniform input.</li>
+                <li><strong>Feature Extraction & Classification:</strong> CNN (LeNet variant) with convolutional, pooling, dropout, and fully connected layers to extract features and classify diseases.</li>
+            </ul>
+
+            <h5>Architecture & Working:</h5>
+            <ul>
+                <li>Convolutional layers extract hierarchical features.</li>
+                <li>Max pooling reduces spatial dimensions.</li>
+                <li>Fully connected layers and softmax activation perform classification.</li>
+                <li>Pre-trained weights enhance accuracy.</li>
+                <li>Input images resized to 128×128 for model prediction.</li>
+                <li>CNN extracts features via Conv2D, MaxPooling2D, and Dropout, then flattening into dense layers for classification.</li>
+                <li>Output provides predicted disease class with probability scores.</li>
+            </ul>
+
+            <div class="mt-3">
+                <a href="https://github.com/0x0z0n/CropVision" target="_blank" class="btn btn-primary me-2">
+                    View Repository
+                </a>
+                <a href="https://0x0z0n.github.io/CropVision/" target="_blank" class="btn btn-success">
+                    Static Page
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Write-Ups Section -->
+<section id="writeups" class="section">
+  <div class="container">
+    <h2 class="text-center">Write-Ups</h2>
+    <div class="iframe-container">
+      <iframe src="https://0x0z0n.github.io/z0n/timeline.html" id="archivesFrame"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- All Writeups Button -->
+<div class="row mt-4">
+  <div class="col-12 text-center">
+    <a href="https://0x0z0n.github.io/z0n/index.html" target="_blank" class="btn btn-primary">
+      All Writeups
+    </a>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<section id="contact" class="section text-center">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <p>Have a project or collaboration in mind? Let’s connect!</p>
+        <a href="mailto:kshitijraut360@gmail.com" class="btn btn-primary">Email Me</a>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="index.js"></script>
+
+<footer>
+  <div class="copyright">
+    © 2025 | Kshitij
+  </div>
+</footer>
+
+<!-- Updated Logic -->
+<script>
+  // Fetch categories dynamically from posts.json
+  fetch("https://0x0z0n.github.io/z0n/data/posts.json")
+    .then(res => res.json())
+    .then(posts => {
+      const categories = {};
+      posts.forEach(post => {
+        const catField = post.category || "Uncategorized";
+        const catList = Array.isArray(catField) ? catField : [catField];
+        catList.forEach(cat => {
+          categories[cat] = (categories[cat] || 0) + 1;
+        });
+      });
+
+      const container = document.getElementById("skillsList");
+
+      Object.keys(categories).sort().forEach(cat => {
+        if (cat === "CheatSheet") return;
+
+        const link = document.createElement("a");
+        // Redirect to blog index page and trigger search automatically
+        link.href = `https://0x0z0n.github.io/z0n/index.html?search=${encodeURIComponent(cat)}`;
+        link.target = "_blank";
+        link.className = "btn btn-outline-success btn-sm m-1";
+        link.textContent = `${cat} (${categories[cat]})`;
+        container.appendChild(link);
+      });
+    })
+    .catch(err => {
+      console.error("Error loading categories:", err);
+      document.getElementById("skillsList").innerHTML = 
+        "<p style='color:red;'>Failed to load skills.</p>";
+    });
+</script>
+
+</body>
+</html>
