@@ -14,7 +14,7 @@
             background-color: #0a0a0a;
             border: 1px solid #111;
             font-family: 'Fira Code', monospace;
-            color: #FFFFFF;
+            color: #00ff95;
             transition: transform 0.2s;
             margin-bottom: 1.5rem;
         }
@@ -70,3 +70,297 @@
 
         .terminal-body a.btn {
             font-family: 'Fira Code', monospace;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div id="particles-js"></div>
+
+<!-- Socials -->
+<div class="socials">
+    <a href="https://www.linkedin.com/in/kshitijnraut/" target="_blank" title="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://app.hackthebox.com/profile/1761906" target="_blank" title="HackTheBox">
+        <i class="fa-solid fa-cube"></i>
+    </a>
+    <a href="https://tryhackme.com/p/0x0z0n" target="_blank" title="TryHackMe">
+        <i class="fa-solid fa-terminal"></i>
+    </a>
+    <a href="https://0x0z0n.github.io/z0n/index.html" target="_blank" title="Notes">
+        <i class="fa-solid fa-book"></i>
+    </a>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#writeups">Write-Ups</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="section text-center">
+    <div class="container">
+        <h1>Kshitij Raut</h1>
+        <p>Offensive Security | CTF Player | Defensive Security</p>
+    </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="section">
+    <div class="container text-center">
+        <h2>About Me</h2>
+        <p>
+            I’m <strong>Kshitij</strong>, a passionate <strong>Cybersecurity Analyst</strong> with hands-on 
+            experience in SOC operations, VAPT, and incident response.  
+            I enjoy solving challenges on <strong>HackTheBox</strong>, <strong>TryHackMe</strong>, and 
+            <strong>CyberDefenders</strong>, while documenting my journey through notes and writeups.  
+            Always curious, always learning — breaking systems to make them stronger. ⚡
+        </p>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="Experience" class="section">
+    <div class="container">
+        <h2 class="text-center">Experience</h2>
+        <!-- Job 1 -->
+        <div class="experience-card p-4 shadow-sm rounded mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="mb-0">Cybersecurity Analyst (SE)</h4>
+                <p class="company mb-0">
+                    <strong>Tata Consultancy Services</strong>
+                    <span class="duration">Mar 2024 – Present</span>
+                </p>
+            </div>
+            <ul class="text-start lh-lg">
+                <li>Investigated triaged 100+ security alerts weekly using SIEM and XDR tools, reducing false positives by 20%.</li>
+                <li>Conducted forensic analysis to identify root causes and mitigate advanced persistent threats.</li>
+                <li>Performed vulnerability assessments and validated remediation, improving compliance by 15%.</li>
+                <li>Executed penetration testing engagements and developed custom payloads for red teaming.</li>
+                <li>Prepared detailed incident reports and collaborated with IT/DevOps teams to strengthen security posture.</li>
+            </ul>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="experience-card p-4 shadow-sm rounded mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="mb-0">Cybersecurity &amp; Digital Forensics Intern</h4>
+                <p class="company mb-0">
+                    <strong>Cyber Secured India</strong>
+                    <span class="duration">Dec 2023 – Mar 2024</span>
+                </p>
+            </div>
+            <ul class="text-start lh-lg">
+                <li>Completed 36+ hrs/week of hands-on cybersecurity and forensics training.</li>
+                <li>Worked on live projects including malware analysis and log investigations.</li>
+                <li>Performed evidence collection and forensic reporting for investigations.</li>
+                <li>Delivered weekly assignments and collaborated on project-based learning tasks.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Certification Section -->
+<section id="certifications" class="section">
+    <div class="container">
+        <h2 class="text-center">Certifications</h2>
+        <div class="row">
+            <!-- Certificate 1 -->
+            <div class="col-md-6">
+                <div class="certificate-card">
+                    <div class="certificate-img-container">
+                        <img src="./Cert/THM1.png" alt="AoC 2021" class="certificate-img">
+                        <div class="certificate-info">
+                            <h4>Advent of Cyber 2021</h4>
+                            <p>Issued by TryHackMe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 2 -->
+            <div class="col-md-6">
+                <div class="certificate-card">
+                    <div class="certificate-img-container">
+                        <img src="./Cert/THM2.png" alt="AoC 2022" class="certificate-img">
+                        <div class="certificate-info">
+                            <h4>Advent of Cyber 2022</h4>
+                            <p>Issued by TryHackMe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Certificate 3 -->
+            <div class="col-md-6">
+                <div class="certificate-card">
+                    <div class="certificate-img-container">
+                        <img src="./Cert/THM3.png" alt="AoC 2023" class="certificate-img">
+                        <div class="certificate-info">
+                            <h4>Advent of Cyber 2023</h4>
+                            <p>Issued by TryHackMe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 4 -->
+            <div class="col-md-6">
+                <div class="certificate-card">
+                    <div class="certificate-img-container">
+                        <img src="./Cert/THM4.png" alt="AoC 2024" class="certificate-img">
+                        <div class="certificate-info">
+                            <h4>Advent of Cyber 2024</h4>
+                            <p>Issued by TryHackMe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section">
+  <div class="container text-center">
+    <h2>Skills</h2>
+    <div id="skillsList" class="d-flex flex-wrap justify-content-center gap-2"></div>
+  </div>
+</section>
+
+<!-- Projects Section (Terminal Design) -->
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="text-center">Projects</h2>
+
+        <!-- Terminal Project Card -->
+        <div class="terminal-card">
+            <div class="terminal-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="terminal-title">CropVision - AI Plant Disease Detection</span>
+            </div>
+            <div class="terminal-body">
+                <p><strong>Description:</strong> Uses CNNs to detect plant diseases automatically with 93%+ accuracy.</p>
+                <p><strong>Proposed System:</strong></p>
+                <ul>
+                    <li>Data Acquisition: Images collected from PlantVillage dataset.</li>
+                    <li>Preprocessing: Images resized and normalized.</li>
+                    <li>Feature Extraction & Classification: CNN (LeNet variant).</li>
+                </ul>
+                <p><strong>Architecture & Working:</strong></p>
+                <ul>
+                    <li>Convolutional layers extract hierarchical features.</li>
+                    <li>Max pooling reduces spatial dimensions.</li>
+                    <li>Fully connected layers + Softmax activation for classification.</li>
+                    <li>Pre-trained weights enhance accuracy.</li>
+                    <li>Input images resized to 128×128.</li>
+                    <li>Output: Predicted disease class with probability scores.</li>
+                </ul>
+                <div class="mt-3">
+                    <a href="https://github.com/0x0z0n/CropVision" target="_blank" class="btn btn-success btn-sm me-2">Repository</a>
+                    <a href="https://0x0z0n.github.io/CropVision/" target="_blank" class="btn btn-success btn-sm me-2">Live Page</a>
+                    <a href="https://0x0z0n.github.io/z0n/posts/CropVision.html" target="_blank" class="btn btn-success btn-sm">Documentation</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Write-Ups Section -->
+<section id="writeups" class="section">
+  <div class="container">
+    <h2 class="text-center">Write-Ups</h2>
+    <div class="iframe-container">
+      <iframe src="https://0x0z0n.github.io/z0n/timeline.html" id="archivesFrame"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- All Writeups Button -->
+<div class="row mt-4">
+  <div class="col-12 text-center">
+    <a href="https://0x0z0n.github.io/z0n/index.html" target="_blank" class="btn btn-primary">
+      All Writeups
+    </a>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<section id="contact" class="section text-center">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <p>Have a project or collaboration in mind? Let’s connect!</p>
+        <a href="mailto:kshitijraut360@gmail.com" class="btn btn-primary">Email Me</a>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="index.js"></script>
+
+<footer>
+  <div class="copyright">
+    © 2025 | Kshitij
+  </div>
+</footer>
+
+<!-- Updated Logic for Skills -->
+<script>
+  fetch("https://0x0z0n.github.io/z0n/data/posts.json")
+    .then(res => res.json())
+    .then(posts => {
+      const categories = {};
+      posts.forEach(post => {
+        const catField = post.category || "Uncategorized";
+        const catList = Array.isArray(catField) ? catField : [catField];
+        catList.forEach(cat => { categories[cat] = (categories[cat] || 0) + 1; });
+      });
+
+      const container = document.getElementById("skillsList");
+
+      Object.keys(categories).sort().forEach(cat => {
+        if (cat === "CheatSheet") return;
+
+        const link = document.createElement("a");
+        link.href = `https://0x0z0n.github.io/z0n/index.html?search=${encodeURIComponent(cat)}`;
+        link.target = "_blank";
+        link.className = "btn btn-outline-success btn-sm m-1";
+        link.textContent = `${cat} (${categories[cat]})`;
+        container.appendChild(link);
+      });
+    })
+    .catch(err => {
+      console.error("Error loading categories:", err);
+      document.getElementById("skillsList").innerHTML = "<p style='color:red;'>Failed to load skills.</p>";
+    });
+</script>
+
+</body>
+</html>
