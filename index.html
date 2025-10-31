@@ -77,6 +77,32 @@
             height: 600px;
             border: none;
         }
+        /* Force iframe to render in mobile viewport */
+.iframe-container {
+  display: flex;
+  justify-content: center;
+}
+
+.iframe-container iframe {
+  width: 375px;      /* Mobile width */
+  height: 812px;     /* Mobile height */
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,255,149,0.15);
+  transform: scale(0.95);
+  transform-origin: top center;
+  background: #0a0a0a;
+}
+
+/* Make sure it looks centered and scaled properly on smaller screens */
+@media (max-width: 400px) {
+  .iframe-container iframe {
+    width: 100%;
+    height: 90vh;
+    transform: none;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -360,6 +386,13 @@
       console.error("Error loading categories:", err);
       document.getElementById("skillsList").innerHTML = "<p style='color:red;'>Failed to load skills.</p>";
     });
+</script>
+<script>
+  const iframe = document.getElementById("archivesFrame");
+  iframe.onload = () => {
+    // Force mobile-like scaling for blog inside iframe
+    iframe.contentWindow.document.body.style.zoom = "0.9";
+  };
 </script>
 
 </body>
