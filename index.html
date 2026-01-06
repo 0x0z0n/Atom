@@ -256,7 +256,6 @@
     <div class="container">
         <h2 class="text-center">Projects</h2>
 
-        <!-- Terminal Project Card -->
         <div class="terminal-card">
             <div class="terminal-header">
                 <div class="dots">
@@ -287,6 +286,40 @@
                     <a href="https://github.com/0x0z0n/CropVision" target="_blank" class="btn btn-success btn-sm me-2">Repository</a>
                     <a href="https://0x0z0n.github.io/CropVision/" target="_blank" class="btn btn-success btn-sm me-2">Live Page</a>
                     <a href="https://0x0z0n.github.io/z0n/posts/CropVision.html" target="_blank" class="btn btn-success btn-sm">Documentation</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="terminal-card">
+            <div class="terminal-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="terminal-title">Threat-Intel-HASH-Conversion - Malware Intel Scraper</span>
+            </div>
+            <div class="terminal-body">
+                <p><strong>Description:</strong> A Python-based automation tool for bulk scanning file hashes (MD5, SHA-1, SHA-256) against the VirusTotal API.</p>
+                
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li><strong>Bulk Processing:</strong> Modernized for Python 3.13+ using <code>openpyxl</code> for .xlsx support.</li>
+                    <li><strong>Rate Management:</strong> Integrated 16-second delay to comply with Public API limits (4 requests/min).</li>
+                    <li><strong>Persistence:</strong> Auto-saves results every 10 rows to prevent data loss during long scans.</li>
+                </ul>
+                
+                <p><strong>Execution & Data Flow:</strong></p>
+                <ul>
+                    <li>Input: Reads malicious/suspicious hashes from Excel Column A.</li>
+                    <li>Analysis: REST API integration fetches detection counts and engine status.</li>
+                    <li>Error Handling: Robustly manages non-existent hashes and API 204/404 responses.</li>
+                    <li>Output: Generates <code>HashConvertedOutput.xlsx</code> with multi-engine threat intelligence.</li>
+                </ul>
+
+                <div class="mt-3">
+                    <a href="https://github.com/0x0z0n/Threat-Intel-HASH-Conversion" target="_blank" class="btn btn-success btn-sm me-2">Repository</a>
+                    <a href="https://raw.githubusercontent.com/0x0z0n/Threat-Intel-HASH-Conversion/refs/heads/main/VTC.py" target="_blank" class="btn btn-success btn-sm">Source Script</a>
                 </div>
             </div>
         </div>
