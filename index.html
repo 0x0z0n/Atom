@@ -133,6 +133,23 @@
             color: #e6f1ff;
         }
 
+        /* --- HEARTBEAT ANIMATION --- */
+        @keyframes heartbeat {
+            0% { opacity: 1; transform: scale(1); text-shadow: 0 0 0 rgba(100, 255, 218, 0); }
+            50% { opacity: 0.7; transform: scale(0.98); text-shadow: 0 0 10px rgba(100, 255, 218, 0.3); }
+            100% { opacity: 1; transform: scale(1); text-shadow: 0 0 0 rgba(100, 255, 218, 0); }
+        }
+
+        .alias-heartbeat {
+            font-family: var(--font-mono);
+            color: var(--accent);
+            font-size: 0.5em; /* Scale relative to the big H2 */
+            margin-left: 15px;
+            vertical-align: middle;
+            display: inline-block;
+            animation: heartbeat 2s infinite ease-in-out;
+        }
+
         .hero h3 {
             font-size: clamp(30px, 6vw, 60px); 
             line-height: 1.1;
@@ -508,7 +525,7 @@
 
     <section class="hero">
         <h1>Hello, World! I am</h1>
-        <h2>Kshitij Raut.<h1>(0x0z0n)</h1></h2>
+        <h2>Kshitij Raut. <span class="alias-heartbeat">(0x0z0n)</span></h2>
         <h3>Bridging Offensive Security & Threat Intelligence.</h3>
         <p>
             Security Analyst specializing in SOC Operations, Incident Response, and VAPT. 
