@@ -25,7 +25,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Light gray background for screen */
+            background-color: #f3f4f6;
             color: var(--text-dark);
             line-height: 1.5;
             font-size: 10.5pt;
@@ -70,13 +70,6 @@
             text-transform: none;
         }
 
-        .subtitle {
-            font-size: 12pt;
-            font-weight: 600;
-            color: var(--text-gray);
-            margin-bottom: 10px;
-        }
-
         .contact-info {
             font-size: 9pt;
             color: var(--text-gray);
@@ -117,6 +110,12 @@
             font-weight: 700;
             font-size: 11pt;
         }
+        
+        .project-link {
+            font-size: 0.9em;
+            margin-left: 8px;
+            color: var(--accent-color);
+        }
 
         .company {
             font-weight: 400;
@@ -127,6 +126,7 @@
             font-size: 9pt;
             font-weight: 600;
             color: var(--text-dark);
+            text-align: right;
         }
 
         ul {
@@ -181,10 +181,11 @@
                 box-shadow: none;
                 margin: 0;
                 width: 100%;
-                padding: 0; /* Let print margins handle it */
+                padding: 0; 
             }
             .no-print { display: none; }
             a { text-decoration: none; color: black; }
+            /* Optional: Show URLs on print if desired, currently hidden for cleanliness */
         }
     </style>
 </head>
@@ -199,9 +200,9 @@
             <h1>Kshitij Raut <span class="alias">(0x0z0n)</span></h1>
             <div class="contact-info">
                 <span><i class="fa-solid fa-envelope"></i> <a href="mailto:kshitijraut360@gmail.com">kshitijraut360@gmail.com</a></span>
-                <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/kshitijnraut/" target="_blank" rel="noopener noreferrer">linkedin.com/in/kshitijnraut</a></span>
-                <span><i class="fa-brands fa-github"></i> <a href="https://github.com/0x0z0n" target="_blank" rel="noopener noreferrer">github.com/0x0z0n</a></span>
-                <span><i class="fa-solid fa-globe"></i> <a href="https://0x0z0n.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">0x0z0n.github.io</a></span>
+                <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/kshitijnraut/" target="_blank">linkedin.com/in/kshitijnraut</a></span>
+                <span><i class="fa-brands fa-github"></i> <a href="https://github.com/0x0z0n" target="_blank">github.com/0x0z0n</a></span>
+                <span><i class="fa-solid fa-globe"></i> <a href="https://0x0z0n.github.io/Portfolio/" target="_blank">0x0z0n.github.io</a></span>
             </div>
         </header>
 
@@ -270,7 +271,10 @@
             <h2 class="section-title">Key Projects</h2>
             
             <div class="project-header">
-                <span class="job-title">Automated Malware Scanner</span>
+                <div>
+                    <span class="job-title">Automated Malware Scanner</span>
+                    <a href="https://github.com/0x0z0n/Threat-Intel-HASH-Conversion" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> View Code</a>
+                </div>
                 <span class="date">Python, Pandas, APIs</span>
             </div>
             <ul>
@@ -279,16 +283,22 @@
             </ul>
 
             <div class="project-header" style="margin-top: 10px;">
-                <span class="job-title">CropVision AI</span>
+                <div>
+                    <span class="job-title">CropVision AI</span>
+                    <a href="https://drive.google.com/file/d/16LyoDLcKa0dHhaDAt3ljQvsNEtKTzfR8/view" target="_blank" class="project-link"><i class="fa-solid fa-file-pdf"></i> View Paper</a>
+                </div>
                 <span class="date">TensorFlow, CNN, Flask</span>
             </div>
             <ul>
-                <li>Built a computer vision application utilizing CNNs to detect agricultural anomalies with <strong>93% accuracy</strong>.</li>
+                <li>Built a computer vision application utilizing CNNs to detect agricultural anomalies with <strong>93% accuracy</strong>.</li> 
                 <li>Demonstrated proficiency in integrating AI/ML models with web frameworks for real-time analysis.</li>
             </ul>
 
             <div class="project-header" style="margin-top: 10px;">
-                <span class="job-title">Security Knowledge Base</span>
+                <div>
+                    <span class="job-title">Security Knowledge Base</span>
+                    <a href="https://0x0z0n.github.io/Blog/" target="_blank" class="project-link"><i class="fa-solid fa-link"></i> View Site</a>
+                </div>
                 <span class="date">Jekyll, JS, Markdown</span>
             </div>
             <ul>
@@ -307,7 +317,7 @@
 
             <ul>
                 <li><strong>Advent of Cyber (2021 - 2025):</strong> Consistent completion of TryHackMe's annual security challenges.</li>
-                <li><strong>Pro Hacker Rank:</strong> Top tier rank on HackTheBox & TryHackMe (Profile: 0x0z0n).</li>
+                <li><strong>Pro Hacker Rank:</strong> Top tier rank on <a href="https://app.hackthebox.com/users/1761906" target="_blank">HackTheBox</a> & <a href="https://tryhackme.com/p/0x0z0n" target="_blank">TryHackMe</a>.</li>
             </ul>
         </section>
 
