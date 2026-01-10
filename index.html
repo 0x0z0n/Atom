@@ -620,7 +620,7 @@
                 <div class="project-top">
                     <i class="fa-regular fa-folder folder-icon"></i>
                     <div class="project-links">
-                        <a href="https://0x0z0n.github.io/z0n/" target="_blank"><i class="fa-solid fa-book"></i></a>
+                        <a href="https://0x0z0n.github.io/Blog/" target="_blank"><i class="fa-solid fa-book"></i></a>
                     </div>
                 </div>
                 <h3>Security Knowledge Base</h3>
@@ -747,7 +747,7 @@
         });
 
         // --- Fetch Skills ---
-        fetch("https://0x0z0n.github.io/z0n/data/posts.json")
+        fetch("https://0x0z0n.github.io/Blog/data/posts.json")
             .then(res => res.json())
             .then(posts => {
                 const categories = {};
@@ -762,7 +762,7 @@
                 Object.keys(categories).sort().forEach(cat => {
                     if (cat === "CheatSheet") return;
                     const link = document.createElement("a");
-                    link.href = `https://0x0z0n.github.io/z0n/index.html?search=${encodeURIComponent(cat)}`;
+                    link.href = `https://0x0z0n.github.io/Blog/index.html?search=${encodeURIComponent(cat)}`;
                     link.target = "_blank";
                     link.className = "skill-pill";
                     link.textContent = cat;
