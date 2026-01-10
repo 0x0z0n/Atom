@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kshitij Raut - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --text-dark: #1a1a1a;
+            --text-gray: #555;
+            --accent-color: #0056b3; /* Professional Blue */
+            --bg-color: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background for screen */
+            color: var(--text-dark);
+            line-height: 1.5;
+            font-size: 10.5pt;
+        }
+
+        /* --- PAPER SHEET STYLE --- */
+        .page {
+            background: white;
+            width: 210mm; /* A4 Width */
+            min-height: 297mm;
+            margin: 20px auto;
+            padding: 40px 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* --- LINKS --- */
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
+
+        /* --- HEADER --- */
+        header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24pt;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .alias {
+            font-family: 'Courier New', monospace;
+            font-size: 14pt;
+            color: var(--text-gray);
+            font-weight: normal;
+            text-transform: none;
+        }
+
+        .subtitle {
+            font-size: 12pt;
+            font-weight: 600;
+            color: var(--text-gray);
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            font-size: 9pt;
+            color: var(--text-gray);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2.section-title {
+            font-size: 11pt;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            margin-bottom: 15px;
+            padding-bottom: 3px;
+            letter-spacing: 1px;
+        }
+
+        /* --- EXPERIENCE & PROJECTS --- */
+        .job-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 11pt;
+        }
+
+        .company {
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .date {
+            font-size: 9pt;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin-bottom: 3px;
+        }
+
+        /* --- SKILLS GRID --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .skill-category {
+            font-weight: 700;
+            font-size: 10pt;
+        }
+
+        /* --- PRINT BUTTON --- */
+        .no-print {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        button:hover { background-color: #003d82; }
+
+        /* --- PRINT MEDIA QUERY --- */
+        @media print {
+            body {
+                background: none;
+                -webkit-print-color-adjust: exact;
+            }
+            .page {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                padding: 0; /* Let print margins handle it */
+            }
+            .no-print { display: none; }
+            a { text-decoration: none; color: black; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print">
+        <button onclick="window.print()"><i class="fa-solid fa-print"></i> Print / Download PDF</button>
+    </div>
+
+    <div class="page">
+        <header>
+            <h1>Kshitij Raut <span class="alias">(0x0z0n)</span></h1>
+            <div class="subtitle">Security Analyst & Red Teamer</div>
+            <div class="contact-info">
+                <span><i class="fa-solid fa-envelope"></i> <a href="mailto:kshitijraut360@gmail.com">kshitijraut360@gmail.com</a></span>
+                <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/kshitijnraut/">linkedin.com/in/kshitijnraut</a></span>
+                <span><i class="fa-brands fa-github"></i> <a href="https://github.com/0x0z0n">github.com/0x0z0n</a></span>
+                <span><i class="fa-solid fa-globe"></i> <a href="https://0x0z0n.github.io/">0x0z0n.github.io</a></span>
+            </div>
+        </header>
+
+        <section>
+            <h2 class="section-title">Professional Summary</h2>
+            <p>
+                Security Analyst with a strong focus on bridging Offensive Security (Red Teaming) and Threat Intelligence (Blue Teaming). Currently working at <strong>TCS</strong> in SOC Operations, Incident Response, and VAPT. Proven track record of orchestrating triage operations, reducing false positive rates by 20% through automation, and executing adversary simulations to strengthen security posture. Adept at using Python for security automation and integrating AI/ML into threat detection.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">Offensive</div>
+                <div>Red Teaming, VAPT, Burp Suite, Windows Internals, Linux Exploitation, AD Security, C2 Frameworks.</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">Defensive</div>
+                <div>SOC Operations, Incident Response, SIEM (Sentinel/Chronicle), XDR, KQL, Malware Analysis, CTI.</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">Engineering</div>
+                <div>Python, Bash, Assembly, Docker, Kubernetes, DevSecOps, REST APIs, Git.</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">AI & Data</div>
+                <div>Computer Vision, Machine Learning, TensorFlow, Pandas.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <span class="job-title">Cybersecurity Analyst <span class="company">| Tata Consultancy Services (TCS)</span></span>
+                    <span class="date">March 2024 – Present</span>
+                </div>
+                <ul>
+                    <li>Orchestrated L1/L2 triage operations using SIEM/XDR to ensure strict SLA compliance during critical P1 incidents.</li>
+                    <li>Investigated and triaged 100+ security alerts weekly, reducing false positive rates by <strong>20%</strong> through correlation rule tuning.</li>
+                    <li>Conducted forensic analysis to identify root causes of security events and mitigate Advanced Persistent Threats (APTs).</li>
+                    <li>Performed vulnerability assessments and validated remediation efforts, improving overall compliance by <strong>15%</strong>.</li>
+                    <li>Executed penetration testing engagements and developed custom payloads to simulate adversary behaviors.</li>
+                    <li>Developed Python automation scripts to streamline log parsing and integrate threat intelligence feeds.</li>
+                </ul>
+            </div>
+
+            <br>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <span class="job-title">Cybersecurity Intern <span class="company">| Cyber Secured India</span></span>
+                    <span class="date">Dec 2023 – Mar 2024</span>
+                </div>
+                <ul>
+                    <li>Assisted in digital forensics investigations involving malware analysis, log investigations, and evidence recovery.</li>
+                    <li>Simulated ransomware attacks to test organizational resilience and validated disaster recovery procedures.</li>
+                    <li>Documented detailed incident reports for stakeholders and compliance audits.</li>
+                    <li>Completed 36+ hours/week of intensive hands-on training in cybersecurity operations and forensics.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Key Projects</h2>
+            
+            <div class="project-header">
+                <span class="job-title">Automated Malware Scanner</span>
+                <span class="date">Python, Pandas, APIs</span>
+            </div>
+            <ul>
+                <li>Developed a SOC automation tool to bulk scan IOCs (File Hashes) against Threat Intelligence REST APIs.</li>
+                <li>Implemented rate-limiting logic and automated reporting to significantly speed up the triage process.</li>
+            </ul>
+
+            <div class="project-header" style="margin-top: 10px;">
+                <span class="job-title">CropVision AI</span>
+                <span class="date">TensorFlow, CNN, Flask</span>
+            </div>
+            <ul>
+                <li>Built a computer vision application utilizing CNNs to detect agricultural anomalies with <strong>93% accuracy</strong>.</li>
+                <li>Demonstrated proficiency in integrating AI/ML models with web frameworks for real-time analysis.</li>
+            </ul>
+
+            <div class="project-header" style="margin-top: 10px;">
+                <span class="job-title">Security Knowledge Base</span>
+                <span class="date">Jekyll, CI/CD, Markdown</span>
+            </div>
+            <ul>
+                <li>Created a centralized repository for technical writeups, CTF walkthroughs, and Red Teaming cheatsheets.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Certifications & Education</h2>
+            <ul>
+                <li><strong>Advent of Cyber (2021 - 2025):</strong> Consistent completion of TryHackMe's annual security challenges.</li>
+                <li><strong>Top % Rank:</strong> HackTheBox & TryHackMe (Profile: 0x0z0n).</li>
+                <li><strong>Bachelor of Engineering:</strong> Computer Science & Data Science.</li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+</html>
