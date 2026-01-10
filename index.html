@@ -56,20 +56,13 @@
         .section-title {
             display: flex;
             align-items: center;
-            font-size: 26px; /* Reduced from 32px */
+            font-size: 26px; 
             white-space: nowrap;
             margin-bottom: 40px;
+            color: #e6f1ff;
         }
 
-        .section-title::before {
-            content: counter(section) ".";
-            counter-increment: section;
-            margin-right: 10px;
-            color: var(--accent);
-            font-family: var(--font-mono);
-            font-size: 20px;
-            font-weight: 400;
-        }
+        /* Removed Numbering Logic Here */
 
         .section-title::after {
             content: "";
@@ -115,8 +108,6 @@
 
         .nav-link:hover { color: var(--accent) !important; }
 
-        .nav-link span { color: var(--accent); margin-right: 5px; }
-
         /* --- HERO SECTION --- */
         .hero {
             min-height: 100vh;
@@ -124,7 +115,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            padding: 0 150px; /* Desktop padding */
+            padding: 0 150px; 
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -145,7 +136,7 @@
         }
 
         .hero h3 {
-            font-size: clamp(30px, 6vw, 60px); /* Slightly smaller than name */
+            font-size: clamp(30px, 6vw, 60px); 
             line-height: 1.1;
             color: var(--text-muted);
             margin-top: 10px;
@@ -163,7 +154,7 @@
             background-color: transparent;
             border: 1px solid var(--accent);
             border-radius: 4px;
-            padding: 18px 25px; /* Larger button */
+            padding: 18px 25px; 
             font-family: var(--font-mono);
             font-size: 14px;
             margin-top: 50px;
@@ -410,7 +401,7 @@
             background-position: center;
             background-size: cover;
             width: 300px;
-            height: auto; /* Height adapts to content */
+            height: auto; 
             background-color: var(--bg-light);
             border-radius: 8px;
             overflow: hidden;
@@ -474,7 +465,7 @@
             .section { padding: 80px 20px; }
             .about-inner { display: block; }
             .about-text { margin-bottom: 40px; }
-            .social-sidebar, .email-sidebar { display: none; } /* Hide sidebars on mobile */
+            .social-sidebar, .email-sidebar { display: none; } 
             .navbar { padding: 20px; }
         }
     </style>
@@ -489,11 +480,11 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#about"><span>01.</span>About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience"><span>02.</span>Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects"><span>03.</span>Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certifications"><span>04.</span>Certs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact"><span>05.</span>Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="btn-outline ms-3" href="assets/resume.pdf" target="_blank" style="padding: 8px 16px; margin-top:0;">Resume</a></li>
                 </ul>
             </div>
@@ -715,7 +706,7 @@
     </section>
 
     <section id="contact" style="text-align: center; max-width: 600px; padding-bottom: 150px;">
-        <h2 class="mono-heading">05. What's Next?</h2>
+        <h2 class="mono-heading">What's Next?</h2>
         <h2 style="font-size: 50px; margin-bottom: 20px;">Get In Touch</h2>
         <p>
             I am actively looking for new opportunities in Red Teaming and Offensive Security. Whether you have a question or just want to say hi, my inbox is always open!
@@ -795,8 +786,6 @@
                 navbar.style.boxShadow = "none";
                 navbar.style.padding = "20px 50px"; // Restore padding
             }
-            // Optional: Hide on scroll down, show on scroll up
-            // if (scrollTop > lastScrollTop) { navbar.style.top = "-80px"; } else { navbar.style.top = "0"; }
             lastScrollTop = scrollTop;
         });
     </script>
