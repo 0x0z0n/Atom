@@ -508,7 +508,7 @@
     <section class="hero">
         <h1>Hello, World! I am</h1>
         <h2>Kshitij Raut.</h2>
-        <h3>Bridging Offensive Security & OPSec.</h3>
+        <h3>Bridging Offensive Security & Threat Intelligence.</h3>
         <p>
             Security Analyst specializing in SOC Operations, Incident Response, and VAPT. 
             Focused on improving security posture through automated threat detection and adversary simulation.
@@ -703,25 +703,7 @@
         <h2 class="mono-heading">MY ARSENAL</h2>
         <h3 style="color: #e6f1ff; margin-bottom: 40px;">Current Operational Loadout</h3>
         <div id="skillsList">
-            <span class="skill-pill">Active Directory Security</span>
-            <span class="skill-pill">Red Teaming</span>
-            <span class="skill-pill">AppSec</span>
-            <span class="skill-pill">Android Security</span>
-            <span class="skill-pill">Windows Internals</span>
-            <span class="skill-pill">Linux Exploitation</span>
-            <span class="skill-pill">SOC Operations</span>
-            <span class="skill-pill">Microsoft Defender XDR</span>
-            <span class="skill-pill">KQL (Threat Hunting)</span>
-            <span class="skill-pill">Cyber Threat Intelligence</span>
-            <span class="skill-pill">Malware Analysis</span>
-            <span class="skill-pill">Network Forensics</span>
-            <span class="skill-pill">OSINT (Sherlock)</span>
-            <span class="skill-pill">DevSecOps</span>
-            <span class="skill-pill">Kubernetes</span>
-            <span class="skill-pill">Computer Vision</span>
-            <span class="skill-pill">Artificial Intelligence</span>
-            <span class="skill-pill">Machine Learning</span>
-            <span class="skill-pill">SQL & Databases</span>
+            <span style="color: var(--text-muted); font-family: var(--font-mono);">Decrypting Matrix Data...</span>
         </div>
     </section>
 
@@ -766,6 +748,33 @@
             }
         });
 
+        // --- Fetch Skills ---
+        fetch("https://0x0z0n.github.io/Blog/data/posts.json")
+            .then(res => res.json())
+            .then(posts => {
+                const categories = {};
+                posts.forEach(post => {
+                    const catField = post.category || "Uncategorized";
+                    const catList = Array.isArray(catField) ? catField : [catField];
+                    catList.forEach(cat => { categories[cat] = (categories[cat] || 0) + 1; });
+                });
+                const container = document.getElementById("skillsList");
+                container.innerHTML = ''; 
+                
+                Object.keys(categories).sort().forEach(cat => {
+                    if (cat === "CheatSheet") return;
+                    const link = document.createElement("a");
+                    link.href = `https://0x0z0n.github.io/Blog/index.html?search=${encodeURIComponent(cat)}`;
+                    link.target = "_blank";
+                    link.className = "skill-pill";
+                    link.textContent = cat;
+                    container.appendChild(link);
+                });
+            })
+            .catch(err => {
+                document.getElementById("skillsList").innerHTML = '<span style="color: #ff5f56; font-family: monospace;">Failed to load skills data.</span>';
+            });
+            
         // --- Navbar Scroll Effect ---
         let lastScrollTop = 0;
         const navbar = document.querySelector('.navbar');
