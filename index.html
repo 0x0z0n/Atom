@@ -276,18 +276,30 @@
             gap: 50px;
         }
         
+        /* --------------------------------------------------------- */
+        /* MODIFIED: Skills Grid Layout                              */
+        /* --------------------------------------------------------- */
         .skills-list {
             display: grid;
-            grid-template-columns: repeat(2, minmax(180px, 220px)); /* Widened for longer text */
+            /* Force exactly two columns */
+            grid-template-columns: 1fr 1fr;
+            /* Add spacing between the grid items */
+            gap: 10px;
             padding: 0;
             margin: 20px 0 0 0;
             overflow: hidden;
             list-style: none;
         }
 
+        /* Span the first item ("Code") across both columns */
+        .skills-list li:first-child {
+            grid-column: 1 / -1; 
+            margin-bottom: 5px; /* Optional: add a little breathing room below the top item */
+        }
+
         .skills-list li {
             position: relative;
-            margin-bottom: 10px;
+            /* margin-bottom: 10px;  <-- Removed margin to let 'gap' handle spacing */
             padding-left: 20px;
             font-family: var(--font-mono);
             font-size: 13px;
@@ -299,6 +311,7 @@
             left: 0;
             color: var(--accent);
         }
+        /* --------------------------------------------------------- */
 
         /* --- EXPERIENCE (Timeline) --- */
         .job-tabs {
