@@ -513,7 +513,7 @@
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#certifications">Certs</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills-cloud">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://0x0z0n.github.io/Blog/" target="_blank">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://0x0z0n.github.io/Research/" target="_blank">Research</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="btn-outline ms-3" href="assets/Kshitij_Raut.html" target="_blank" style="padding: 8px 16px; margin-top:0;">Resume</a></li>
                 </ul>
@@ -527,7 +527,7 @@
             <li><a href="https://www.linkedin.com/in/kshitijnraut/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
             <li><a href="https://tryhackme.com/p/0x0z0n" target="_blank"><i class="fa-solid fa-terminal"></i></a></li>
             <li><a href="https://app.hackthebox.com/profile/1761906" target="_blank"><i class="fa-solid fa-cube"></i></a></li>
-            <li><a href="https://0x0z0n.github.io/Blog/" target="_blank"><i class="fa-solid fa-book"></i></a></li>
+            <li><a href="https://0x0z0n.github.io/Research/" target="_blank"><i class="fa-solid fa-book"></i></a></li>
         </ul>
     </div>
 
@@ -657,7 +657,7 @@
                 <div class="project-top">
                     <i class="fa-regular fa-folder folder-icon"></i>
                     <div class="project-links">
-                        <a href="https://0x0z0n.github.io/Blog/" target="_blank"><i class="fa-solid fa-book"></i></a>
+                        <a href="https://0x0z0n.github.io/Research/" target="_blank"><i class="fa-solid fa-book"></i></a>
                     </div>
                 </div>
                 <h3>Security Knowledge Base</h3>
@@ -825,7 +825,7 @@
         });
 
         // --- Fetch Skills ---
-        fetch("https://0x0z0n.github.io/Blog/data/posts.json")
+        fetch("https://0x0z0n.github.io/Research/data/posts.json")
             .then(res => res.json())
             .then(posts => {
                 const categories = {};
@@ -840,7 +840,7 @@
                 Object.keys(categories).sort().forEach(cat => {
                     if (cat === "CheatSheet") return;
                     const link = document.createElement("a");
-                    link.href = `https://0x0z0n.github.io/Blog/index.html?search=${encodeURIComponent(cat)}`;
+                    link.href = `https://0x0z0n.github.io/Research/index.html?search=${encodeURIComponent(cat)}`;
                     link.target = "_blank";
                     link.className = "skill-pill";
                     link.textContent = cat;
