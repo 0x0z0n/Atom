@@ -4,7 +4,7 @@
 
 With a background spanning **Digital Forensics** and **Adversary Emulation**, his approach to security is rooted in the "Assume Breach" mentality—building resilient infrastructure that doesn't just block threats but actively hunts them.
 
-### ey Specializations
+### Specializations
 
 * **SOC Operations & IR:** Expert at L1/L2 triage, forensic root-cause analysis, and reducing false positives in enterprise environments.
 * **Offensive Security:** Proficient in VAPT, custom payload development, and executing penetration testing engagements.
